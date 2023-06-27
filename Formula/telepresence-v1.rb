@@ -1,6 +1,6 @@
 # This script is generated automatically by the release automation code in the
 # Telepresence repository:
-class Telepresence < Formula
+class Telepresencev1 < Formula
   include Language::Python::Virtualenv
   desc "Local dev environment attached to a remote Kubernetes cluster"
   homepage "https://telepresence.io"
@@ -12,11 +12,11 @@ class Telepresence < Formula
   depends_on "sshfs"
 
   def install
-    bin.install "bin/telepresence"
+    bin.install "bin/telepresence-v1"
     libexec.install Dir["libexec/*"]
   end
 
   test do
-    system "#{bin}/telepresence", "--help"
+    system "#{bin}/telepresence-v1", "--help"
   end
 end
