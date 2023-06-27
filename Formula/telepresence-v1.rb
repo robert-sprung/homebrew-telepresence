@@ -9,11 +9,11 @@ class TelepresenceV1 < Formula
 
 
   def install
-    bin.install "bin/telepresence-v1"
+    bin.install "bin/telepresence"
     libexec.install Dir["libexec/*"]
   end
 
   test do
-    system "#{bin}/telepresence-v1", "--help"
+    system "#{bin}/telepresence", "--help"
   end
 end
